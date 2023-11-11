@@ -32,6 +32,8 @@ startButton.addEventListener('click', function(event) {
     showQuiz();
 });
 
-function init (){
+function init () {
     showStart();
 }
+
+init();
