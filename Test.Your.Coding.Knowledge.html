@@ -16,9 +16,26 @@
 </head>
 <body>
     <main class="container">
-      <section class="start">
-        <header class="container">
+     <section class="start">
+      <header class="container">
+        <div> 
+          <a href="./highscore.html"> 
+          <button class="scores-header" 
+          id="view-high-scores"> 
+          View High Scores 
+          </button> 
+          </a> 
+        </div> 
+  
+        <div class="timer"> 
+          <p> 
+          Time: 
+          <span id="timer"> 
+          0 
+          </span> 
+          </p> 
           <h1>Coding Quiz Challenge</h1>
+        </div>
         </header>
         <p>Try to answer the following code-related questions within the time limit!</p>
         <button>Start</button>   
@@ -102,6 +119,7 @@
                 <div class="initialInput">
                     <label for="initials">Initials:</label>
                     <input type = "text" name="initials" id="initials" placeholder="ABC"/>
+                    <button id="submit">Submit</button>
                 </div>
             </form>                    
       </section>
