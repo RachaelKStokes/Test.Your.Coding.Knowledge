@@ -4,14 +4,64 @@ var quizScreen = document.querySelector('.quiz');
 var endScreen = document.querySelector('.end');
 var startButton = document.querySelector('#start-btn');
 
-//Quiz choice button variables
-//var choice1;
-//var choice2;
-//var choice3;
-//var choice4; 
-//var checkAnswer 
-//var correctAnswers = 0;
-//var questionNumber = 0;
+//Quiz array
+
+let quesions = [
+        {
+        number: 1,
+        question: "What is a function in JavaScript?",
+        answer: "A block of code that executes a task when called upon.",
+        options: [
+            "A fun party.",
+            "A block of code that executes a task when called upon.", 
+            "A true or false variable.",
+            "Values made up of letters, numbers, or symbols."
+            ]
+        },
+        {
+        number: 2,
+        question: "A Boolean is a true or false variable.",
+        answer: "True.",
+        options: [
+            "True.",
+            "False."
+            ]  
+        },
+        {
+        number: 3,
+        question: "What is an event listener?",
+        answer: "A function in HTML that waits for an event (such as a click) and reacts to it.",
+        options: [
+            "A function in JavaScript that waits for an event (such as a click) and reacts to it.",
+            "Someone who eavesdrops on parties.",
+            "A function in HTML that waits for an event (such as a click) and reacts to it.",
+            "A base class within which all objects inherit specific properties."
+
+        ]   
+        },
+        {
+        number: 4,
+        question: "An array is a container that houses different data types.",
+        answer: "True.",
+        options: [
+            "True.",
+            "False."
+            ]
+        },
+        {
+        number: 5,
+        question: "In JavaScript, what does this '//' mean?",
+        answer: "Used at the beginning of a comment.",
+        options: [
+            "Used at the end of a comment.",
+            "Or.",
+            "Used at the beginning of a comment.",
+            "And."
+            ]
+        }
+
+]
+
 
 //functions for what is shown on the screen
 //When a question is answered, the next question is displayed
