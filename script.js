@@ -1,35 +1,72 @@
-//declaring variables
-var startScreen = document.querySelector('.start');
-var quizScreen = document.querySelector('.quiz');
-var endScreen = document.querySelector('.end');
-var startButton = document.querySelector('#start-btn');
+
 
 //functions for what is shown on the screen
 //When a question is answered, the next question is displayed
 //time is subtracted from the clock for wrong answers
 //The end screen is displayed when the timer reaches 0 or all questions are answered
 //at the end it will ask for user inititals for saving scores
-function showStart (){
-    startScreen.style.display = null;
-    quizScreen.style.display = "none";
-    endScreen.style.display = "none";
-    timeLeft.textContent = startTime;
+//Quiz questions
 
-}
+let questions = [
+    {
+    number: 1,
+    question: "What is a function in JavaScript?",
+    answer: "A block of code that executes a task when called upon.",
+    options: [
+        "A fun party.",
+        "A block of code that executes a task when called upon.", 
+        "A true or false variable.",
+        "Values made up of letters, numbers, or symbols."
+        ]
+    },
+    {
+    number: 2,
+    question: "A Boolean is a true or false variable.",
+    answer: "True.",
+    options: [
+        "True.",
+        "False."
+        ]  
+    },
+    {
+    number: 3,
+    question: "What is an event listener?",
+    answer: "A function in HTML that waits for an event (such as a click) and reacts to it.",
+    options: [
+        "A function in JavaScript that waits for an event (such as a click) and reacts to it.",
+        "Someone who eavesdrops on parties.",
+        "A function in HTML that waits for an event (such as a click) and reacts to it.",
+        "A base class within which all objects inherit specific properties."
 
-function showQuiz(){
-    startScreen.style.display = "none";
-    quizScreen.style.display = null;
-    endScreen.style.display = "none";
+    ]   
+    },
+    {
+    number: 4,
+    question: "An array is a container that houses different data types.",
+    answer: "True.",
+    options: [
+        "True.",
+        "False."
+        ]
+    },
+    {
+    number: 5,
+    question: "In JavaScript, what does this '//' mean?",
+    answer: "Used at the beginning of a comment.",
+    options: [
+        "Used at the end of a comment.",
+        "Or.",
+        "Used at the beginning of a comment.",
+        "And."
+        ]
+    }
 
-}
+]
 
-function showEnd(){
-    startScreen.style.display = "none";
-    quizScreen.style.display = "none";
-    endScreen.style.display = null;
 
-}
+
+
+
 let timeValue =  15;
 let que_count = 0;
 let que_numb = 1;
