@@ -70,7 +70,9 @@ var startScreen = document.querySelector(".start");
 var quizScreen = document.querySelector(".quiz");
 var endScreen = document.querySelector(".end");
 var startBtn = document.querySelector(".startBtn");
-var nextBtn = document.querySelector(".nextBtn");
+var questionCard = document.querySelector("questionCard");
+var index = 0;
+var possibleAns = ['1.', '2.', '3.', '4.'];
 
 
 
@@ -84,6 +86,8 @@ function showQuiz() {
     startScreen.style.display = "none";
     quizScreen.style.display = null;
     endScreen.style.display = "none";
+
+    displayQuestion();
 }
 function showEnd() {
     startScreen.style.display = "none";
@@ -91,13 +95,26 @@ function showEnd() {
     endScreen.style.display = null;
 }
 
+function displayQuestion() {
+    var possible = questions[index].possible;
+    var pEl = document.createElement('p');
+    pEl.textContent = questions[index].text;
+
+    questionCard.innerHTML = null;
+    questionCard.appendChild(pEl);
+
+    for (var i =0; i < possible.length; i++) {
+        var buttonEl = document.createElement('button');
+        buttonEl.textContent = possible[i];
+        questionCard.appendChild(buttonEl);
+    }
+}
+startBtn.addEventListener('click', function(event) {
+showQuiz();
+});
     function init() {
     showStart();
 }
-startBtn.addEventListener("startBtn", function(){
-    //when start button is clicked, show quiz
-    showQuiz
-    });
-    
+
 init();
 
