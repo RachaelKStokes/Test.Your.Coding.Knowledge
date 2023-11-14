@@ -112,8 +112,19 @@ function displayQuestion() {
 startBtn.addEventListener('click', function(event) {
 showQuiz();
 });
-    function init() {
-    showStart();
+
+quizScreen.addEventListener('click', function(event) {
+    if (event.target.matches('button')) {
+        index++;
+        if (questions[index]) {
+        return displayQuestion();
+        }
+        showEnd();
+    }
+});
+
+function init() {   
+    showQuiz();
 }
 
 init();
