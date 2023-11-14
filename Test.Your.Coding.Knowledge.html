@@ -15,41 +15,34 @@
     </style>
 </head>
 <body>
-     <!-- Quiz Box -->
-     <div class="quiz_box">
-         <header>
-             <h1>Coding Quiz Challenge</h1>
-             <!-- start Quiz button -->
-             <div class="start_btn"><button>Start Quiz</button></div>
-             <div class="timer">
-                 <div class="time_left_txt">Time Left</div>
-                 <div class="timer_sec">90</div>
-             </div>
-             <div class="time_line"></div>
-         </header>
-         <section>
-             <div class="question_text">
-           
-             </div>
-             <div class="option_list">
-         
-             </div>
-         </section>
- 
-       
-         <footer>
-             <div class="total_questions">
-               
-             </div>
-             <button class="next_btn">Next Question</button>
-         </footer>
-     </div>
- 
-     <!-- Result Box -->
-     <div class="result_box">
-         <div class="complete_text">Finish!</div>
-         <div class="score_text">Score:</div>
-     </div>
+     <main class="container">
+        <section class = "start">
+            <header>
+                <h1>Coding Quiz Challenge</h1>
+            </header>
+            <p>Try to answer all questions within the time limit!</p>
+            <button>Start</button>
+        </section>
+
+        <section class = "quiz">
+            <header>
+                <h2 class = "questionNumber"></h2>
+                <p class = "questionText"></p>
+                <button id = "btn0"></button>
+                <button id = "btn1"></button>
+                <button id = "btn2"></button>
+                <button id = "btn3"></button>
+            </header>
+        </section>
+
+        <section class = "end">
+            <header>
+                <h2>Finished!</h2>
+            </header>
+            <p>Score:</p>
+        </section>
+     </main>
+   
  
      <script src="./assets/script.js"></script>
  </body>
