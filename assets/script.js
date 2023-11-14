@@ -69,7 +69,7 @@ var questions = [
 var startScreen = document.querySelector(".start");
 var quizScreen = document.querySelector(".quiz");
 var endScreen = document.querySelector(".end");
-var startBtn = document.querySelector(".startBtn");
+var startBtn = document.querySelector("#startBtn");
 var questionCard = document.querySelector("questionCard");
 var index = 0;
 var possibleAns = ['1.', '2.', '3.', '4.'];
@@ -110,8 +110,8 @@ function displayQuestion() {
     }
 }
 startBtn.addEventListener('click', function(event) {
-showQuiz();
-});
+    showQuiz();
+} );
 
 quizScreen.addEventListener('click', function(event) {
     if (event.target.matches('button')) {
@@ -124,7 +124,7 @@ quizScreen.addEventListener('click', function(event) {
 });
 
 function init() {   
-    showQuiz();
+    showStart();
 }
 
 init();
