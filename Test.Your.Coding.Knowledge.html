@@ -15,115 +15,66 @@
     </style>
 </head>
 <body>
-    <main class="container">
-     <section class="start">
-      <header class="container">
-        <div> 
-          <a href="./highscore.html"> 
-          <button class="scores-header" 
-          id="view-high-scores"> 
-          View High Scores 
-          </button> 
-          </a> 
-        </div> 
-  
-        <div class="timer"> 
-          <p> 
-          Time: 
-          <span id="timer"> 
-          0 
-          </span> 
-          </p> 
-          <h1>Coding Quiz Challenge</h1>
-        </div>
-        </header>
-        <p>Try to answer the following code-related questions within the time limit!</p>
-        <button>Start</button>   
-      </section>
+     <!-- start Quiz button -->
+     <div class="start_btn"><button>Start Quiz</button></div>
 
-      <section class="quiz">
-        <header class="container">
-            <h2>Quiz</h2>
-        </header>
-        <header>
-            <h3>Question 1.</h3>
-        </header>
-            <p>What is a function in JavaScript?</p>
-        <button>1. A fun party</button>   
-        <button>2. A block of code that executes a task when called upon.</button>  
-        <button>3. A true or false variable.</button>
-        <button>4. Values made up of letters, numbers, or symbols.</button>
-      </section>
-
-      <section class="quiz">
-        <header class="container">
-            <h2>Quiz</h2>
-        </header>
-        <header>
-            <h3>Question 2.</h3>
-        </header>
-            <p>A Boolean is a true or false variable.</p>
-        <button>1. True.</button>   
-        <button>2. False.</button>  
-      </section>
-
-      <section class="quiz">
-        <header class="container">
-            <h2>Quiz</h2>
-        </header>
-        <header>
-            <h3>Question 3.</h3>
-        </header>
-            <p>What is an event listener?</p>
-        <button id="btn0">1. Someone who eavesdrops on parties.</button>   
-        <button id="btn1">2. A function in JavaScript that waits for an event (such as a click) and reacts to it.</button>  
-        <button id="btn2">3. A function in HTML that waits for an event (such as a click) and reacts to it.</button>
-        <button id="btn3">4. A base class within which all objects inherit specific properties.</button>
-      </section>
-
-      <section class="quiz">
-        <header class="container">
-            <h2>Quiz</h2>
-        </header>
-        <header>
-            <h3>Question 4.</h3>
-        </header>
-            <p>An array is a variable that houses different data types.</p>
-        <button>1. True.</button>   
-        <button>2. False.</button>  
-      </section>
-
-      <section class="quiz">
-        <header class="container">
-            <h2>Quiz</h2>
-        </header>
-        <header>
-            <h3>Question 5.</h3>
-        </header>
-            <p>In JavaScript, what does this '//' mean?</p>
-        <button>1. Or.</button>   
-        <button>2. And.</button>  
-        <button>3. Used at the beginning of a comment.</button>
-        <button>4. Used at the end of a comment. </button>
-      </section>
-
-      <section class="end">
-        <header class="container">
-            <h2>End</h2>
-        </header>
-            <p>Quiz FInished!</p>
-            <p>Score:</p>
-            <p class="score"></pclass></p>
-            <p>Enter your initials to save high score!</p>
-            <form method="POST">
-                <div class="initialInput">
-                    <label for="initials">Initials:</label>
-                    <input type = "text" name="initials" id="initials" placeholder="ABC"/>
-                    <button id="submit">Submit</button>
-                </div>
-            </form>                    
-      </section>
-    </main>
-    <script src="./script.js"></script>
-</body>
-</html>
+     <!-- Info Box -->
+     <div class="info_box">
+         <div class="info-title"><span>Quiz Rules</span></div>
+         <div class="info-list">
+             <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
+             <div class="info">2. Once you select your answer, it can't be undone.</div>
+             <div class="info">3. You can't select any option once time goes off.</div>
+             <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+             <div class="info">5. You'll get points on the basis of your correct answers.</div>
+         </div>
+         <div class="buttons">
+             <button class="quit">Exit Quiz</button>
+             <button class="restart">Continue</button>
+         </div>
+     </div>
+ 
+     <!-- Quiz Box -->
+     <div class="quiz_box">
+         <header>
+             <div class="title">Coding Quiz Challenge</div>
+             <div class="timer">
+                 <div class="time_left_txt">Time Left</div>
+                 <div class="timer_sec">15</div>
+             </div>
+             <div class="time_line"></div>
+         </header>
+         <section>
+             <div class="question_text">
+           
+             </div>
+             <div class="option_list">
+         
+             </div>
+         </section>
+ 
+       
+         <footer>
+             <div class="total_questions">
+               
+             </div>
+             <button class="next_btn">Next Question</button>
+         </footer>
+     </div>
+ 
+     <!-- Result Box -->
+     <div class="result_box">
+         <div class="complete_text">Finished!</div>
+         <div class="score_text">
+           
+         </div>
+         <div class="buttons">
+             <button class="restart">Replay Quiz</button>
+             <button class="quit">Quit Quiz</button>
+         </div>
+     </div>
+ 
+     <script src="./assets/js/script.js"></script>
+ </body>
+ </html>
+ </html>
